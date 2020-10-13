@@ -74,6 +74,9 @@ public class ReactNativeFirebaseFirestoreQuery {
         case "EQUAL":
           query = query.whereEqualTo(Objects.requireNonNull(fieldPath), value);
           break;
+        case "NOT_EQUAL":
+          query = query.whereNotEqualTo(Objects.requireNonNull(fieldPath), value);
+          break;
         case "GREATER_THAN":
           query = query.whereGreaterThan(Objects.requireNonNull(fieldPath), Objects.requireNonNull(value));
           break;

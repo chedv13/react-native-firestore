@@ -98,6 +98,9 @@ public class ReactNativeFirebaseFirestoreQuery {
         case "IN":
           query = query.whereIn(Objects.requireNonNull(fieldPath), Objects.requireNonNull((List<Object>) value));
           break;
+        case "NOT_IN":
+          query = query.whereNotIn(Objects.requireNonNull(fieldPath), Objects.requireNonNull((List<Object>) value));
+          break;
       }
     }
   }
